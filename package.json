@@ -1,0 +1,23 @@
+{
+  "name": "11ty-jamstack-blog",
+  "version": "1.0.0",
+  "description": "Portofolio site including a Blog built with 11ty - JAMSTACK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aniekanedet/11ty-jamstack-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aniekanedet/11ty-jamstack-blog/issues"
+  },
+  "homepage": "https://github.com/aniekanedet/11ty-jamstack-blog#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
+}
