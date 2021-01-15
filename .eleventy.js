@@ -10,7 +10,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('assets/doc');
   eleventyConfig.addPassthroughCopy('Js');
   eleventyConfig.addPassthroughCopy('Js/vendor');
-  // eleventyConfig.addPassthroughCopy('admin');
+  eleventyConfig.addPassthroughCopy('admin');
 
   eleventyConfig.addFilter('dump', obj => {
     return util.inspect(obj);

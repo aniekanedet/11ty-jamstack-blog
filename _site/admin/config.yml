@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'posts'
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: we-codes 
+    api_key: 787996231176877
+    default_transformations:
+      - fetch_format: auto
+        quality: auto
+        width: 400
+        crop: scale
