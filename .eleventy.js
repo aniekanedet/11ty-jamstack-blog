@@ -1,4 +1,4 @@
-// const util = require('util');
+const util = require('util');
 // const algoliasearch = require('algoliasearch');
 // const searchClient = algoliasearch('', '');
 // const algoliaIndex = searchClient.initIndex('blog');
@@ -12,9 +12,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('Js/vendor');
   // eleventyConfig.addPassthroughCopy('admin');
 
-  // eleventyConfig.addFilter('dump', obj => {
-  //   return util.inspect(obj);
-  // });
+  eleventyConfig.addFilter('dump', obj => {
+    return util.inspect(obj);
+  });
 
   // eleventyConfig.addFilter('formatDate', value => {
   //   const ISOcode = 'en-GB';

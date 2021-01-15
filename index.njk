@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/base.njk'
+layout: layouts/base.njk
 ---
 <div class="container ">
                            <div class="header-content">
@@ -75,11 +75,29 @@ layout: 'layouts/base.njk'
                 <section class="sectional-content">
                    <div id="section6">
                        <div class="container ">
-                            <h3 class="mt-4 mb-5">Notes </h3>
-                            <div class="text-center">
-                                <p>Notes not yet available...... </p>
-                            </div>
-                       
+                            <h3 class="mt-4 mb-5 ">Notes </h3>
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                    {# <pre>{{ collections.posts | dump }}</pre> #}
+
+                    {%for post in collections.posts%}
+                    <div class="post-preview">
+                        <a href="{{post.url | url}}">
+                        <h2 class="post-title">
+                        {{post.data.title}}
+                        </h2>
+                        <h5 class="post-subtitle">
+                            {{post.data.description}}
+                        </h5>
+                        </a>
+                        {# <p class="post-meta">Posted by
+                        <a href="#">Start Bootstrap</a>
+                        on September 24, 2019</p> #}
+                    </div>
+                    <hr>
+                    {% endfor %}
+
+                    
                    </div>
                </section>
            
