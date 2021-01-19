@@ -1,4 +1,9 @@
 ---
+pagination:
+  data: collections.posts
+  size: 2
+  alias: posts
+  reverse: true
 layout: layouts/base.njk
 ---
 <div class="container ">
@@ -80,7 +85,7 @@ layout: layouts/base.njk
                     <div class="col-lg-8 col-md-10 mx-auto">
                     {# <pre>{{ collections.posts | dump }}</pre> #}
 
-                    {%for post in collections.posts%}
+                    {%for post in posts%}
                     <div class="post-preview">
                         <a href="{{post.url | url}}">
                         <h2 class="post-title">
@@ -90,15 +95,23 @@ layout: layouts/base.njk
                             {{post.data.description}}
                         </h5>
                         </a>
-                        {# <p class="post-meta">Posted by
-                        <a href="#">Start Bootstrap</a>
-                        on September 24, 2019</p> #}
+                        
                     </div>
                     <hr>
                     {% endfor %}
 
                     
                    </div>
+                   {# <pre>{{ pagination | dump }}</pre> #}
+                    <div style="text-align: center;">
+                        {% if pagination.previous %}
+                        <a class="btn btn-primary float-left" href="{{ pagination.previousPageLink | url }}">← Newer Posts</a>
+                        {% endif %}
+
+                        {% if pagination.next %}
+                        <a class="btn btn-primary float-right" href="{{ pagination.nextPageLink | url }}">Older Posts →</a>
+                        {% endif %}
+                    </div>
                </section>
            
                    <section class=" sectional-content" >
