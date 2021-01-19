@@ -3,7 +3,7 @@ title: New post from netlify cms
 date: 2021-01-19T14:26:48.107Z
 author: John Doe
 description: a new test post
-layout: layouts/post.njk
+layout: layouts/posts.njk
 ---
 
 
